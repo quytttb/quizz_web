@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="responsive_style.css">
+    <link rel="stylesheet" href="dangnhap_dangky.css">
+    <title>ĐĂNG KÝ</title>
+    <script>
+        function passwordChanged() {
+            var strength = document.getElementById('strength');
+            var strongRegex = new RegExp("^(?=.{14,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\\W).*$", "g");
+            var mediumRegex = new RegExp("^(?=.{10,})(((?=.*[A-Z])(?=.*[a-z]))|((?=.*[A-Z])(?=.*[0-9]))|((?=.*[a-z])(?=.*[0-9]))).*$", "g");
+            var enoughRegex = new RegExp("(?=.{8,}).*", "g");
+            var pwd = document.getElementById("input_Password");
+            if (pwd.value.length == 0) {
+                strength.innerHTML = 'Type Password';
+            } else if (false == enoughRegex.test(pwd.value)) {
+                strength.innerHTML = 'More Characters';
+            } else if (strongRegex.test(pwd.value)) {
+                strength.innerHTML = '<span style="color:green">Strong!</span>';
+            } else if (mediumRegex.test(pwd.value)) {
+                strength.innerHTML = '<span style="color:orange">Medium!</span>';
+            } else {
+                strength.innerHTML = '<span style="color:red">Weak!</span>';
+            }
+        }
+    </script>
+</head>
+<body>
+    <nav id="nav-bar">
+        <ul class="menu-level-1">
+            <li class="item-level-1"> <a href="QuanTriVien.html" class="item-level-1-title">Quản Trị Viên</a> </li>
+            <li class="item-level-1"> <a href="#" class="item-level-1-title">Liên kết</a> </li>
+            <li class="item-level-1"> <a href="#" class="item-level-1-title">Kích hoạt</a>
+                <li class="item-level-1"> <a href="TrangLamBaiThi.html" class="item-level-1-title">Làm quizz</a> </li>
+            <li class="item-level-1"> <a href="DangNhap.html" class="item-level-1-title">Đăng nhập</a> </li>
+            <li class="item-level-1">
+                <a href="DangKy.html" class="item-level-1-title">Đăng ký</a>
+        </ul>
+
+    </nav>
+    <div class="container">
+        <form name="signup_form" class="signup_form" method="post" action="DangKy.aspx" onsubmit="">
+            <h1>Đăng Ký Thành Viên</h1>
+            <input type="email" id="input_Email" name="input_Email" placeholder="Nhập Email" />
+            <input type="text" id="input_Name" name="input_Name" placeholder="Nhập Họ Tên" />
+            <input type="password" id="input_Password" name="input_Password" placeholder="Nhập Password" />
+            <span id="strength">Bạn chưa nhập mật khẩu</span>
+            <input type="password" id="input_rePassword" name="input_rePassword" placeholder="Nhập Lại Password" />
+            <button type="submit">Đăng Ký</button>
+            <span>Đã có tài khoản ? <a href="DangNhap.html">Đăng Nhập !</a> </span>
+        </form>
+    </div>
+
+    <footer id="footer">
+        <strong>Footer</strong>
+    </footer>
+</body>
+</html>

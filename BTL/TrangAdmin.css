@@ -1,0 +1,68 @@
+﻿body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    padding: 1.6rem;
+    margin-top: 5rem;
+}
+
+.add_new_item {
+    text-align: center;
+    border: 3px solid #f1f1f1;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+    display: inline-block;
+    color: #6f7070;
+    margin-bottom: 0px;
+}
+
+
+input {
+    width: 100%;
+    padding: 1rem 2rem;
+    margin: 0.4rem 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #f7452E;
+    color: white;
+    font-size: 15px;
+    padding: 1rem 2rem;
+    margin: 0.8rem 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+    button:hover {
+        opacity: 0.8;
+    }
+
+span {
+    float: right;
+    padding-top: 1rem;
+}
+
+@media screen and (max-width: 300px) {
+    span {
+        display: block;
+        float: none;
+    }
+}
+
+label {
+    float: left;
+}
+
+.item-price {
+    float: none;
+}

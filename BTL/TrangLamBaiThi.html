@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRANG LÀM BÀI THI</title>
+    <link rel="stylesheet" href="responsive_style.css">
+    <link rel="stylesheet" href="TrangLamBaiThi.css">
+    <script src="https://kit.fontawesome.com/9d2c5dbeac.js" crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="quiz_script.js"></script>
+</head>
+<body onload="">
+
+<nav id="nav-bar">
+    <ul class="menu-level-1">
+        <li class="item-level-1"><a href="QuanTriVien.html" class="item-level-1-title">Quản Trị Viên</a></li>
+        <li class="item-level-1"><a href="#" class="item-level-1-title">Liên kết</a></li>
+        <li class="item-level-1"><a href="#" class="item-level-1-title">Kích hoạt</a>
+        <li class="item-level-1"><a href="TrangLamBaiThi.html" class="item-level-1-title">Làm quizz</a></li>
+        <li class="item-level-1"><a href="DangNhap.html" class="item-level-1-title">Đăng nhập</a></li>
+        <li class="item-level-1">
+            <a href="DangKy.html" class="item-level-1-title">Đăng ký</a>
+            <!--    <ul class="menu-level-2">
+                    <li class="item-level-2"> <a href="#" class="item-level-2-title" >Đồng Hồ</a> </li>
+                    <li class="item-level-2"> <a href="#" class="item-level-2-title" >Túi Chéo</a> </li>
+                </ul>
+            </li>
+                <li class="item-level-1">
+                <i class="fas fa-cart-arrow-down"> <a href=".html" class="item-level-1-title" > Giỏ Hàng</a> </i>
+            </li> -->
+    </ul>
+
+</nav>
+
+<div id="counter" class="sticky-head"></div>
+
+<div id="score" class="sticky-side">Điểm : 0</div>
+
+<!-- Phần nội dung -->
+<div class="container">
+    <div class="inner">
+
+        <h1>TRẮC NGHIỆM</h1>
+
+        <div class="question-container">
+            <h2>Đây là câu hỏi</h2>
+            <ul class="simpleList">
+                <li class="simpleListAnswer">
+                    <span class="fa fa-square-o"></span>
+                    <span class="simpleListText" onclick="">Lựa chọn 1</span>
+                </li>
+                <li class="simpleListAnswer">
+                    <span class="fa fa-square-o"></span>
+                    <span class="simpleListText" onclick="">Lựa chọn 2</span>
+                </li>
+                <li class="simpleListAnswer">
+                    <span class="fa fa-square-o"></span>
+                    <span class="simpleListText" onclick="">Lựa chọn 3</span>
+                </li>
+                <li class="simpleListAnswer">
+                    <span class="fa fa-square-o"></span>
+                    <span class="simpleListText" onclick="">Lựa chọn 4</span>
+                </li>
+            </ul>
+
+            <div class="answerReveal">
+
+                <div class="quizzAnswerC">
+                    <div class="answerHeader">
+                        <h3 class="correctMessage"><i class="fa fa-check-circle "></i>Đúng! </h3>
+                    </div><!--end answer header-->
+                    <div class="answerText">
+                        <p id="bravo">Bạn trả lời rất chính xác!</p>
+                    </div><!--end asnwerText-->
+                </div><!--end quizzAnswerC-->
+
+                <div class="quizzAnswerF">
+                    <div class="answerHeader">
+                        <h3 class="wrongMessage"><i class="fa fa-times-circle"></i>Sai</h3>
+                    </div><!--end answer header-->
+                    <div class="answerText">
+                        <p id="sorry">Rất tiếc câu trả lời của bạn không chính xác...</p>
+                    </div><!--end asnwerText-->
+                </div><!--end quizzAnswerF-->
+            </div><!--end answerReveal-->
+            <h4 id="stat"></h4>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- Mã Nguồn Javascript-->
+
+<script src="XuLyBaiLam.js"></script>
+
+<!--Footer-->
+<footer id="footer">
+    <p>Đây là footer !</p>
+</footer>
+</body>
+</html>
